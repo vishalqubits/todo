@@ -2,9 +2,8 @@
 // separately type checking our queries and resolvers. However, the "Resolvers"
 // generated types is useful syntax if you are defining your resolvers
 
+import { Resolvers } from "../__generated__/resolvers-types";
 import Mutation from "./mutation";
-
-import { Resolvers } from "../../../common/src/__generated__/apollo-server-resolvers-types";
 
 // in a single file.
 const resolvers: Resolvers = { Mutation };

@@ -1,4 +1,4 @@
-import { MutationResolvers } from "../../../common/src/__generated__/apollo-server-resolvers-types";
+import { MutationResolvers } from "../__generated__/resolvers-types";
 
 // Use the generated `MutationResolvers` type to type check our mutations!
 export const Mutation: MutationResolvers = {

@@ -8,7 +8,7 @@ const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === "undefined", // Disables force-fetching on the server (so queries are only run once)
     link: new HttpLink({
-      uri: "https://flyby-router-demo.herokuapp.com/", // Server URL (must be absolute)
+      uri: "http://localhost:4000/", // Server URL (must be absolute)
     }),
     cache: new InMemoryCache(),
   });
