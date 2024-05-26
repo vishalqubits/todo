@@ -5,8 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "tsc",
-    "dev": "rm -rf ./dist && tsc && nodemon ./dist/src/index.js",
+    "build": "rm -rf ./dist && tsc",
+    "dev": "npx tsx src/index.ts",
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
@@ -18,8 +18,9 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/introspection": "4.0.3",
     "@graphql-codegen/typescript": "4.0.7",
     "@graphql-codegen/typescript-resolvers": "4.1.0",
-    "@graphql-codegen/introspection": "4.0.3"
+    "tsx": "^4.11.0"
   }
 }
