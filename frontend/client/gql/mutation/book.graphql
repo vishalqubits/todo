@@ -4,3 +4,10 @@ mutation addBook($input: AddBookInput!) {
     message
   }
 }
+
+query getBooks {
+  books {
+    title
+    author
+  }
+}

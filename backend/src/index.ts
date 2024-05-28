@@ -21,8 +21,8 @@ const server = new ApolloServer({
 const { url } = await startStandaloneServer(server, {
   context: async ({ req }) => {
     return {
-      prisma,
       req,
+      prisma,
     };
   },
 });

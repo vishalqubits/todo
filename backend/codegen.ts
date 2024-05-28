@@ -7,6 +7,10 @@ const config: CodegenConfig = {
   generates: {
     "./src/__generated__/resolvers-types.ts": {
       plugins: ["typescript", "typescript-resolvers"],
+      config: {
+        useIndexSignature: true,
+        contextType: "./context#MyContext",
+      },
     },
 
     "../frontend/client/__client_generated__/apollo-hooks/graphql.ts": {
@@ -15,6 +19,10 @@ const config: CodegenConfig = {
         "typescript-operations",
         "typescript-react-apollo",
       ],
+      config: {
+        withHooks: true,
+        withComponents: false,
+      },
     },
 
     "../frontend/client/__client_generated__/types/index.d.ts": {
